@@ -100,7 +100,7 @@ body {
   }
 
   section {
-    min-height: 100vh;
+    min-height: 50vh;
     padding: 10rem 9% 2rem;
   }
   
@@ -266,8 +266,6 @@ span {
   bottom: 20px;
   left: 24px;
 }
-
-/* me */
 
 
 
@@ -697,7 +695,7 @@ span {
       top: 100%;
       left: 0;
       width: 100%;
-      padding: ;
+      padding: 5em;
       background: var(--bg-oxford-blue);
       border-top: .1rem solid rgba(0, 0, 0, .2);
       box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
@@ -792,3 +790,6 @@ margin: 20px;
 
   }
 
+#projects {
+  margin-bottom: 10em;
+}
