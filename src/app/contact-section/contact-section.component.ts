@@ -8,13 +8,13 @@ import { Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild } fro
 export class ContactSectionComponent implements OnChanges {
 
   @Input()
-  sectionMinHeight: number = 0;
+  sectionMinHeight?: number;
 
   @ViewChild('contactContainer')
   contactContainerRef!: ElementRef<HTMLDivElement>;
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (this.contactContainerRef)
+    if (this.contactContainerRef && this.sectionMinHeight)
       this.contactContainerRef.nativeElement.style.height = this.sectionMinHeight + 'px';
   }
 }
