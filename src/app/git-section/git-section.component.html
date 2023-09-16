@@ -1,0 +1,35 @@
+<div #gitStatContainer class="hi">
+  <h2 class="my-0 py-8 text-5xl font-light text-center">Github Stats</h2>
+
+  <div class="max-w-[1000px] m-auto">
+    <div class="sm:flex">
+      <!-- Project repo https://github.com/anuraghazra/github-readme-stats -->
+      <img class="sm:flex-1 w-full " [src]="'https://github-readme-stats.vercel.app/api/top-langs/?username=' + username" alt="Github top languages">
+
+      <div class="sm:flex-1 sm:flex sm:flex-col sm:justify-between">
+        <!-- Project repo https://github.com/anuraghazra/github-readme-stats -->
+        <img class="w-full" [src]="'https://github-readme-stats.vercel.app/api?username=' + username" alt="Github stats">
+
+        <!-- Project repo https://github.com/DenverCoder1/github-readme-streak-stats -->
+        <img class="w-full" [src]="'https://github-readme-streak-stats-tan.vercel.app?user=' + username" alt="Github streak">
+      </div>
+    </div>
+
+    <mat-divider class="my-5"></mat-divider>
+
+    <!-- Project repo https://github.com/2016rshah/githubchart-api -->
+    <img class="w-full" [src]="'https://ghchart.rshah.org/' + username" alt="Github calendar">
+
+    <mat-divider class="my-5"></mat-divider>
+
+    <p class="text-base font-light">
+      Thanks ♥️
+      <a class="underline font-medium" href="https://github.com/anuraghazra/github-readme-stats" target="_blank">anuraghazra</a>
+      ,
+      <a class="underline font-medium" href="https://github.com/DenverCoder1/github-readme-streak-stats" target="_blank">DenverCoder1</a>
+      and
+      <a class="underline font-medium" href="https://github.com/2016rshah/githubchart-api" target="_blank">2016rshah</a>
+      for the github stats projects.
+    </p>
+  </div>
+</div>
