@@ -1,0 +1,11 @@
+.skill-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 180px);
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 375px) {
+  .skill-container {
+    grid-template-columns: repeat(auto-fill, 150px);
+  }
+}
