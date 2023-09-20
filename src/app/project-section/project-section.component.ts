@@ -64,8 +64,8 @@ export class ProjectSectionComponent {
         { name: 'HTML', iconPath: 'assets/images/skills/html.svg' },
         { name: 'CSS', iconPath: 'assets/images/skills/css.svg' }
       ],
-      sourceCodeLink: 'https://github.com/abhirupbakshi/todo',
-      deployedLink: 'https://github.com/abhirupbakshi/todo'
+      sourceCodeLink: 'https://github.com/abhirupbakshi/code-converter',
+      deployedLink: 'https://code-converter-app-mrkishansharma.vercel.app/'
     }
   ];
 }
