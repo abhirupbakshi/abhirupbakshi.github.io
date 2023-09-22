@@ -1,53 +1,55 @@
 <div class="">
   <h2 class="my-0 py-8 text-5xl font-light text-center">Projects</h2>
 
-  <mat-tab-group>
+  <div class="project-container w-full">
     <ng-container *ngFor="let project of projects">
-      <mat-tab [label]="project.name">
-        <div>
-          <img
-            class="mb-5 w-full max-h-[450px] object-cover"
-            [src]="project.imagePath"
-            [alt]="project.name + 'image'"
-          />
-          <h2 class="text-2xl">{{ project.name }}</h2>
-          <p class="text-base font-thin">{{ project.description }}</p>
+      <mat-card class="">
+        <mat-card-content>
+          <div>
+            <img
+              class="mb-5 w-full max-h-[450px] object-cover"
+              [src]="project.imagePath"
+              [alt]="project.name + 'image'"
+            />
+            <h2 class="text-2xl">{{ project.name }}</h2>
+            <p class="text-base font-thin">{{ project.description }}</p>
 
-          <mat-divider class="my-5"></mat-divider>
+            <mat-divider class="my-5"></mat-divider>
 
-          <h3 class="text-lg">Tech Stack:</h3>
-          <div class="flex flex-wrap gap-5">
-            <ng-container *ngFor="let tech of project.techStack">
-              <img
-                class="w-16 h-16"
-                [src]="tech.iconPath"
-                [alt]="tech.name + 'icon'"
-              />
-            </ng-container>
+            <h3 class="text-lg">Tech Stack:</h3>
+            <div class="flex flex-wrap gap-5">
+              <ng-container *ngFor="let tech of project.techStack">
+                <img
+                  class="w-16 h-16"
+                  [src]="tech.iconPath"
+                  [alt]="tech.name + 'icon'"
+                />
+              </ng-container>
+            </div>
+
+            <mat-divider class="my-5"></mat-divider>
+
+            <div class="flex justify-between flex-wrap">
+              <a
+                [href]="project.sourceCodeLink"
+                target="_blank"
+                mat-flat-button
+                color="primary"
+                class="w-fit p-3 mat-headline-6 font-normal"
+                >Source code</a
+              >
+              <a
+                [href]="project.deployedLink"
+                target="_blank"
+                mat-flat-button
+                color="primary"
+                class="w-fit p-3 mat-headline-6 font-normal"
+                >Deployed link</a
+              >
+            </div>
           </div>
-
-          <mat-divider class="my-5"></mat-divider>
-
-          <div class="flex justify-between flex-wrap">
-            <a
-              [href]="project.sourceCodeLink"
-              target="_blank"
-              mat-flat-button
-              color="primary"
-              class="w-fit p-3 mat-headline-6 font-normal"
-              >Source code</a
-            >
-            <a
-              [href]="project.deployedLink"
-              target="_blank"
-              mat-flat-button
-              color="primary"
-              class="w-fit p-3 mat-headline-6 font-normal"
-              >Deployed link</a
-            >
-          </div>
-        </div>
-      </mat-tab>
+        </mat-card-content>
+      </mat-card>
     </ng-container>
-  </mat-tab-group>
+  </div>
 </div>

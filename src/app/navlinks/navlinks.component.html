@@ -4,11 +4,10 @@
 <a [class]="usedInSidenav ? 'sidenav-option' : ''" #sectionLink href="#project" mat-flat-button>Projects</a>
 <a [class]="usedInSidenav ? 'sidenav-option' : ''" #sectionLink href="#git" mat-flat-button>Github Stats</a>
 <a [class]="usedInSidenav ? 'sidenav-option' : ''" #sectionLink #contactLink href="#contact" mat-flat-button>Contact</a>
-<a [class]="usedInSidenav ? 'sidenav-option' : ''" #resumeLink
-  mat-flat-button
-  color="primary"
-  href="https://drive.google.com/file/d/1X_ouUp8hk7RCEaaROSTZMCnCEC4xomz3/view?usp=drive_link"
-  target="_blank"
+<a [class]="usedInSidenav ? 'sidenav-option' : ''" #resumeLink mat-flat-button color="primary"
+  [href]="googleDriveResumeLink" target="_blank"
 >
   Resume
 </a>
+<a class="hidden" #resumedownloadLink
+  [href]="'https://drive.google.com/uc?export=download&id=' + googleDriveResumeFileId"></a>

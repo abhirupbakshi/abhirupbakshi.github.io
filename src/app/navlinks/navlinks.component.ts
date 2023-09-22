@@ -1,11 +1,14 @@
-import { Component, ElementRef, Input, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, QueryList, ViewChild, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-navlinks',
   templateUrl: './navlinks.component.html',
   styleUrls: ['./navlinks.component.scss']
 })
-export class NavlinksComponent {
+export class NavlinksComponent implements AfterViewInit {
+
+  googleDriveResumeLink: string = 'https://drive.google.com/file/d/1X_ouUp8hk7RCEaaROSTZMCnCEC4xomz3/view?usp=drive_link';
+  googleDriveResumeFileId: string = '1X_ouUp8hk7RCEaaROSTZMCnCEC4xomz3';
 
   @Input()
   usedInSidenav: boolean = false;
@@ -16,6 +19,15 @@ export class NavlinksComponent {
   @ViewChild('resumeLink', { read: ElementRef })
   resumeLinkRef!: ElementRef<HTMLAnchorElement>;
 
+  @ViewChild('resumedownloadLink', { read: ElementRef })
+  resumedownloadLinkRef!: ElementRef<HTMLAnchorElement>;
+
   @ViewChild('contactLink', { read: ElementRef })
   contactLinkRef!: ElementRef<HTMLAnchorElement>;
+
+  ngAfterViewInit(): void {
+    this.resumeLinkRef.nativeElement.addEventListener('click', () => {
+      this.resumedownloadLinkRef.nativeElement.click();
+    })
+  }
 }
