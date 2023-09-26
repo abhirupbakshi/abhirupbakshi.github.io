@@ -9,7 +9,7 @@ import { NavlinksComponent } from './navlinks/navlinks.component';
 })
 export class AppComponent implements OnInit, AfterViewInit {
 
-  private readonly sidenavTriggerWidth: number = 850;
+  private readonly sidenavTriggerWidth: number = 900;
   private scrollEventHandlers: { [key: string]: EventListener } = {};
 
   title = 'portfolio';

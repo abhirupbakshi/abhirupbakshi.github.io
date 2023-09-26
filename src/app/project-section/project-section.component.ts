@@ -53,6 +53,19 @@ export class ProjectSectionComponent {
       deployedLink: 'https://drive.google.com/file/d/1mHt6nfzpeX-Sn3nRqlIGf-x1ntP-Cdb3/view'
     },
     {
+      imagePath: 'assets/images/projects/starting-line.png',
+      name: 'Starting Line',
+      description:
+        'Starting Line is a ecommerce website that focuses primarily on clothing and accessories. It is a \'https://www.finishline.com\' clone.',
+      techStack: [
+        { name: 'JavaScript', iconPath: 'assets/images/skills/javascript.svg' },
+        { name: 'HTML', iconPath: 'assets/images/skills/html.svg' },
+        { name: 'CSS', iconPath: 'assets/images/skills/css.svg' }
+      ],
+      sourceCodeLink: 'https://github.com/abhirupbakshi/starting-line',
+      deployedLink: 'https://stirring-griffin-705e95.netlify.app/'
+    },
+    {
       imagePath: 'assets/images/projects/code-converter.png',
       name: 'Code Converter',
       description:

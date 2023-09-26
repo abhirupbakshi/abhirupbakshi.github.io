@@ -1,0 +1,11 @@
+.tool-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 180px);
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 375px) {
+  .tool-container {
+    grid-template-columns: repeat(auto-fill, 150px);
+  }
+}

@@ -17,6 +17,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { GitSectionComponent } from './git-section/git-section.component';
+import { ToolSectionComponent } from './tool-section/tool-section.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { GitSectionComponent } from './git-section/git-section.component';
     ProjectSectionComponent,
     ContactSectionComponent,
     AboutSectionComponent,
-    GitSectionComponent
+    GitSectionComponent,
+    ToolSectionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,18 @@
+<div class="">
+  <h2 class="my-0 py-8 text-5xl font-light text-center">Tools</h2>
+
+  <div class="tool-container mt-10 justify-center">
+    <ng-container *ngFor="let tool of tools">
+      <mat-card class="h-[180px] overflow-hidden">
+        <mat-card-content class="h-full flex flex-col items-center gap-2">
+          <img
+            class="w-full h-2/3 object-contain"
+            [src]="tool.iconPath"
+            [alt]="tool.name + 'image'"
+          />
+          <p class="text-lg font-light">{{ tool.name }}</p>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </div>
+</div>
