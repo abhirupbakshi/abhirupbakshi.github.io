@@ -2,19 +2,15 @@
   <mat-drawer #drawer *ngIf="isDrawerActive" mode="over" class="w-1/2">
     <!-- app-navlinks are getting used in 2 places with different instances -->
     <app-navlinks
-      [usedInSidenav]="true"
-      class="mt-10 flex flex-col"
+      [usedInSidenav]="true" class="mt-10 flex flex-col"
     ></app-navlinks>
   </mat-drawer>
 
   <mat-drawer-content #sideNavContent class="overflow-x-hidden">
-    <nav
-      #nav
-      class="h-16 navbar-height w-full fixed z-50 flex items-center bg-slate-200 shadow-md"
-      [class]="
-        !isDrawerActive ? 'justify-around' : 'pl-5 pr-10 justify-between'
-      "
-    >
+    <nav #nav
+    class="h-16 navbar-height w-full fixed z-50 flex items-center bg-slate-200 shadow-md"
+    [class]="!isDrawerActive ? 'justify-around' : 'pl-5 pr-10 justify-between'">
+
       <ng-container *ngIf="isDrawerActive; else wholeNav">
         <button mat-icon-button (click)="drawer?.toggle()">
           <mat-icon>menu</mat-icon>
@@ -35,7 +31,7 @@
 
     <hr class="h-16 m-0 p-0 navbar-height invisible" />
 
-    <section #section id="home" class="m-auto mb-10 w-11/12 md:w-4/6">
+    <section #section id="home" class="section-container">
       <app-home-section
         [navContactLinkRef]="navContactLinkRef"
         [sectionMinHeight]="sectionMinHeight"
@@ -52,7 +48,7 @@
     <section #section id="tool" class="m-auto mb-10 w-11/12 md:w-4/6">
       <app-tool-section></app-tool-section>
     </section>
-    <section #section id="project" class="m-auto mb-10 w-11/12 md:w-4/6">
+    <section #section id="project" class="section-container">
       <app-project-section></app-project-section>
     </section>
     <section #section id="git" class="m-auto mb-10 w-11/12 md:w-4/6">
