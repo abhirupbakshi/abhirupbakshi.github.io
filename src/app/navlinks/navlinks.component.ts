@@ -22,11 +22,15 @@ export class NavlinksComponent implements AfterViewInit {
   @ViewChild('resumedownloadLink', { read: ElementRef })
   resumedownloadLinkRef!: ElementRef<HTMLAnchorElement>;
 
+  @ViewChild('newWindowResumeLink', { read: ElementRef })
+  newWindowResumeLinkRef!: ElementRef<HTMLAnchorElement>;
+
   @ViewChild('contactLink', { read: ElementRef })
   contactLinkRef!: ElementRef<HTMLAnchorElement>;
 
-  ngAfterViewInit(): void {
+  ngAfterViewInit() {
     this.resumeLinkRef.nativeElement.addEventListener('click', () => {
+      this.newWindowResumeLinkRef.nativeElement.click();
       this.resumedownloadLinkRef.nativeElement.click();
     })
   }
